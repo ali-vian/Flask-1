@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <script src="{{ url_for('static',filename='jquery.min.js') }}"></script>
+    <script src="{{ url_for('static',filename='jquery.mousewheel.js') }}"></script>
+    <script src="{{ url_for('static',filename='jquery-ui.custom.min.js') }}"></script>
+    <script src="{{ url_for('static',filename='RScompiler.3.2.min.js') }}"></script>
+    <script src="{{ url_for('static',filename='RSrun.3.2.min.js') }}"></script>
+    <script src="{{ url_for('static',filename='compiler.3.2.min.js') }}"></script>
+    <script src="{{ url_for('static',filename='glow.3.2.min.js') }}"></script>
+    <title>Game Ball</title>
+  </head>
+  <style>
+    *,
+    root {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      height: 100vh;
+      font-family: Arial, sans-serif;
+      height: 100vh;
+      background-color: aquamarine;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      padding: 10px;
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+    }
+    main {
+      display: flex;
+      gap: 30px;
+      justify-content: center;
+      align-items: center;
+    }
+
+    div button {
+      padding: 10px 20px;
+      background-color: blue;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      margin: 10px;
+      border-radius: 5px;
+    }
+    button[disabled] {
+      background-color: grey;
+      cursor: not-allowed;
+    }
+    p {
+      max-width: 400px;
+    }
+  </style>
+  <body>
+    <header>
+      <h1>Game Ball</h1>
+      <h3>220411100082 | Muhammad Alivian Sidiq</h3>
+    </header>
+    <main>
+      <div id="glowscript" class="glowscript"></div>
+      <p>
+        Tekan <code>start</code> Untuk Memulai, Gunakan arah panah, Terdapat 2
+        Mode yaitu <code>bounce</code> jika menabarak akan memantul dan
+        <code>stop</code> jika menabrak akan berhenti. Gunakan arah pada
+        keyboard untuk menggerakkan bola ungu
+      </p>
+    </main>
+
+    <script src="{{ url_for('static',filename='app.js') }}"></script>
+  </body>
+</html>
